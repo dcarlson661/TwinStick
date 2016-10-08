@@ -19,9 +19,11 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (CrossPlatformInputManager.GetButton ("Fire1")) {
+            //print("GameManager recording False.");
 			recording = false;
 		} else {
-			recording = true;
+            //print("GameManager recording True.");
+            recording = true;
 		}
 
 		if (Input.GetKeyDown (KeyCode.P) && isPaused) {

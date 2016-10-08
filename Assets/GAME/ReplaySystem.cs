@@ -25,7 +25,7 @@ public class ReplaySystem : MonoBehaviour {
 	}
 
 	void PlayBack () {
-		rigidBody.isKinematic = true;
+		rigidBody.isKinematic = true;//move it ourselves when we play back
 		int frame = Time.frameCount % bufferFrames;
 		print ("Reading frame " + frame);
 		transform.position = keyFrames [frame].position;
@@ -33,7 +33,7 @@ public class ReplaySystem : MonoBehaviour {
 	}
 
 	void Record () {
-		rigidBody.isKinematic = false;
+		rigidBody.isKinematic = false;//physics engin to move it 
 		int frame = Time.frameCount % bufferFrames;
 		float time = Time.time;
 		keyFrames [frame] = new MyKeyFrame (time, transform.position, transform.rotation);
