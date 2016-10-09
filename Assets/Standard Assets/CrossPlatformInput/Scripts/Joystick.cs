@@ -33,6 +33,8 @@ namespace UnityStandardAssets.CrossPlatformInput
         void Start()
         {
             m_StartPos = transform.position;
+            //https://forum.unity3d.com/threads/unity-5-new-mobile-assets-joystick-problem.307627/
+            //m_StartPos = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
         }
 
 		void UpdateVirtualAxes(Vector3 value)
